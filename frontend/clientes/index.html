@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Clientes</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ajuste do caminho do CSS -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerenciar Clientes</h1>
+            <nav>
+                <ul>
+                    <li><a href="../clientes/index.html">Cadastro de Clientes</a></li>
+                    <li><a href="../produtos/index.html">Cadastro de Produtos</a></li>
+                    <li><a href="../vendas/index.html">Cadastro de Vendas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <button onclick="listarClientes()">Listar Clientes</button>
+
+        <h2>Inserir/Editar Cliente</h2>
+        <form id="clienteForm">
+            <input type="hidden" id="id" name="id" /> <!-- Campo oculto para editar -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required/>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required/>
+            <button type="submit">Salvar Cliente</button>
+        </form>
+
+        <h2>Excluir Cliente</h2>
+        <input type="text" id="deleteId" placeholder="ID do Cliente"/>
+        <button onclick="excluirCliente()">Excluir Cliente</button>
+
+        <h2>Lista de Clientes</h2>
+        <div id="clientesList"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>

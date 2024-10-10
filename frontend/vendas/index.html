@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Vendas</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../clientes/index.html">Cadastro de Clientes</a></li>
+            <li><a href="../produtos/index.html">Cadastro de Produtos</a></li>
+            <li><a href="../vendas/index.html">Cadastro de Vendas</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Adicionar ou Editar Venda</h2>
+        <form id="vendaForm">
+            <input type="hidden" id="id"> <!-- Campo oculto para editar -->
+            <input type="number" id="clienteId" placeholder="ID do Cliente" required>
+            <input type="number" id="produtoId" placeholder="ID do Produto" required>
+            <input type="number" id="quantidade" placeholder="Quantidade" required>
+            <button type="submit">Salvar Venda</button>
+        </form>
+        
+        <h2>Lista de Vendas</h2>
+        <div id="vendasList"></div>
+
+        <h2>Excluir Venda</h2>
+        <input type="number" id="deleteId" placeholder="ID da Venda para excluir">
+        <button onclick="excluirVenda()">Excluir Venda</button>
+    </section>
+
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>

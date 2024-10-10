@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Produtos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../clientes/index.html">Cadastro de Clientes</a></li>
+            <li><a href="../produtos/index.html">Cadastro de Produtos</a></li>
+            <li><a href="../vendas/index.html">Cadastro de Vendas</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Adicionar ou Editar Produto</h2>
+        <form id="produtoForm">
+            <input type="hidden" id="id"> <!-- Hidden input for editing -->
+            <input type="text" id="nome" placeholder="Nome do Produto" required>
+            <input type="number" id="preco" placeholder="Preço" required>
+            <button type="submit">Salvar Produto</button>
+        </form>
+        
+        <h2>Lista de Produtos</h2>
+        <div id="produtosList"></div>
+
+        <h2>Excluir Produto</h2>
+        <input type="number" id="deleteId" placeholder="ID do Produto para excluir">
+        <button onclick="excluirProduto()">Excluir Produto</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Vendas</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vendas</h1>
+        <button onclick="listarVendas()">Listar Vendas</button>
+        <div id="vendasList"></div>
+
+        <h2>Inserir/Editar Venda</h2>
+        <form id="vendaForm">
+            <label for="id">ID (deixe vazio para inserir):</label>
+            <input type="text" id="id" name="id" />
+            <label for="clienteId">ID do Cliente:</label>
+            <input type="text" id="clienteId" name="clienteId" required/>
+            <label for="produtoId">ID do Produto:</label>
+            <input type="text" id="produtoId" name="produtoId" required/>
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" required/>
+            <button type="submit">Salvar Venda</button>
+        </form>
+
+        <h2>Excluir Venda</h2>
+        <input type="text" id="deleteId" placeholder="ID da Venda"/>
+        <button onclick="excluirVenda()">Excluir Venda</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
